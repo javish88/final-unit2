@@ -1,0 +1,291 @@
+
+/*--------- Basic element styling ---------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'B612 Mono';
+  min-width: 320px;
+  text-align: center;
+  background-image: radial-gradient( #2376ae 0%, #c16ecf 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h3 {
+    font-weight: 900;
+    margin: 0;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+}
+
+a:hover {
+  background:rgba(0,0,0,0.3);
+}
+
+p {
+    font-weight: 300;
+    padding-bottom: 2em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/*--------- Basic layout styling ---------*/
+.wrap {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+/*---------- header styles ----------*/
+.intro {
+    padding-bottom: 2em;
+}
+
+.title {
+    padding: 0.5em 0
+}
+
+.intro-article {
+    color: #fff;
+    text-shadow: 0 1px 5px black;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.profile {
+    width: 90%; 
+}
+
+
+/*---------- Contact & footer styles ----------*/
+.contact {
+    padding: 3em 0;
+    border-bottom: 1px #4a4a4a solid;
+}
+
+.contact p {
+    margin: 0 auto;
+}
+
+.contactDetails {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2em 0;
+}
+
+.footer h3,
+.back2top {
+    font-size: 0.8em;
+    background-color: inherit;
+}
+
+.foot-display {
+    display: none;
+}
+
+/*---------- Media Query ----------*/
+@media screen and (min-width: 768px) {
+
+    /*---------- Tablet layout ----------*/
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav ul,
+    .nav a {
+        flex: 1 300px;
+        margin: 0;
+        background-color: inherit;
+    }
+
+    .intro {
+        justify-content: space-between;
+    }
+
+    .profile {
+        order: 1;
+        align-self: flex-start;
+        width: 40%
+    }
+
+    .intro-article {
+        text-align: left;
+        margin-top: 0;
+        width: 50%
+    }
+
+    .portfolio-title {
+        font-size: 1em; 
+        padding: 1em 0;
+    }
+
+    .portfolios {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .portfolio {
+        flex: 1 50%;
+        flex-direction: column;
+        padding: 0 0.5em
+    }
+
+    .contentfolio {
+        margin: 0.5em 0
+    }
+
+    .contentport {
+        width: 80%;
+    }
+
+
+    .contact {
+        flex-direction: column;
+        padding: 2em 0 1em;
+    }
+
+    .contact-title {
+        font-size: 0.8em
+    }
+
+    .contact p {
+        width: 80%;
+        margin: 0.5em;
+    }
+
+    .backtotop {
+        display: none;
+    }
+
+    .footer {
+        padding: 1em 0 0;
+    }
+
+    .foot-display {
+        display: inline-block;
+    }
+
+    .foot-display {
+        font-size: 0.5em
+    }
+}
+
+/*---------- Media Query ----------*/
+@media screen and (min-width: 1024px) {
+    .wrap {
+        max-width: 1024px;
+    }
+
+    /*---------- Desktop header layout ----------*/
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 1em 0;
+    }
+
+    .intro {
+        align-items: flex-start;
+    }
+
+    .profile {
+        order: 1;
+        align-self: flex-start;
+        width: 40%
+    }
+
+    .intro-article {
+        font-size: 1.4em;
+        text-align: left;
+    }
+
+    .portfolio-title {
+        font-size: 1em;
+    }
+
+    .portfolios {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .portfolio {
+        flex: 1 33%;
+    }
+
+    .contentfolio {
+        margin: 1em 0 0
+    }
+
+    .contentport {
+        width: 90%;
+        font-size: 0.9em;
+        margin-top: 0.4em;
+    }
+    .skills {
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    
+    .contact p {
+        width: 60%;
+    }
+}
+
+/*---------- clearfix ----------*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
